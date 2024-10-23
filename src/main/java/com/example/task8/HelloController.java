@@ -14,22 +14,32 @@ public class HelloController implements Initializable {
     public Pane paneTree;
 
     private ChristmasTree tree;
-    private ChristmasTree dtree;
 
     @Override
     public void initialize(URL location, ResourceBundle resources) {
         tree = new ChristmasTreeImpl();
-        dtree = tree; // Инициализируем dtree сразу с объектом ёлки
-        dtree.draw(paneTree); // Рисуем ёлку сразу при запуске
+        tree.draw(paneTree);
     }
 
     public void addGarland(ActionEvent actionEvent) {
-        dtree = new Girland(dtree);
-        dtree.draw(paneTree);
+        tree = new Girland(tree);
+        tree.draw(paneTree);
     }
 
     public void addStar(ActionEvent actionEvent) {
-        dtree = new Star(dtree);
-        dtree.draw(paneTree);
+        tree = new Star(tree);
+        tree.draw(paneTree);
+    }
+
+    public void addPresents(ActionEvent actionEvent) {
+        tree = new Presents(tree);
+        tree.draw(paneTree);
+    }
+
+    public void addAll(ActionEvent actionEvent) {
+        tree = new Girland(tree);
+        tree = new Star(tree);
+        tree = new Presents(tree);
+        tree.draw(paneTree);
     }
 }

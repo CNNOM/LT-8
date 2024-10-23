@@ -17,6 +17,8 @@
             </padding>
             <Button text="Добавить гирлянду" onAction="#addGarland"/>
             <Button text="Добавить звезду" onAction="#addStar"/>
+            <Button text="Добавить подарки" onAction="#addPresents"/>
+            <Button text="Добавить всё" onAction="#addAll"/>
         </HBox>
     </top>
     <center>
