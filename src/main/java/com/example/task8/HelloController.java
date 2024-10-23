@@ -42,4 +42,8 @@ public class HelloController implements Initializable {
         tree = new Presents(tree);
         tree.draw(paneTree);
     }
+    public void removeAll(ActionEvent actionEvent) {
+        tree = new ChristmasTreeImpl();
+        tree.draw(paneTree);
+    }
 }

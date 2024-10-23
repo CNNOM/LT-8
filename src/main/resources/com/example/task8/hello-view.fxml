@@ -19,6 +19,8 @@
             <Button text="Добавить звезду" onAction="#addStar"/>
             <Button text="Добавить подарки" onAction="#addPresents"/>
             <Button text="Добавить всё" onAction="#addAll"/>
+            <Button text="Удалить все" onAction="#removeAll"/>
+
         </HBox>
     </top>
     <center>
