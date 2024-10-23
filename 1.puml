@@ -1,0 +1,53 @@
+@startuml
+class com.example.task8.Presents {
+}
+class com.example.task8.HelloApplication {
++ void start(Stage)
++ {static} void main(String[])
+}
+
+class com.example.task8.Girland {
++ Circle[] circle
++ void draw(Pane)
+- void drawwithoirland(Pane)
+}
+
+
+interface com.example.task8.ChristmasTree {
+~ void draw(Pane)
+}
+
+class com.example.task8.HelloController {
++ Pane paneTree
+- ChristmasTree tree
+- ChristmasTree dtree
++ void initialize(URL,ResourceBundle)
++ void addGarland(ActionEvent)
++ void addStar(ActionEvent)
+}
+
+
+class com.example.task8.Star {
++ void draw(Pane)
+- void drawStar(Pane)
+}
+
+class com.example.task8.ChristmasTreeImpl {
++ void draw(Pane)
+}
+
+abstract class com.example.task8.TreeDecorator {
+# ChristmasTree tree
++ void draw(Pane)
+}
+
+
+
+
+javafx.application.Application <|-- com.example.task8.HelloApplication
+com.example.task8.TreeDecorator <|-- com.example.task8.Girland
+javafx.fxml.Initializable <|.. com.example.task8.HelloController
+com.example.task8.TreeDecorator <|-- com.example.task8.Star
+com.example.task8.ChristmasTree <|.. com.example.task8.ChristmasTreeImpl
+com.example.task8.ChristmasTree <|.. com.example.task8.TreeDecorator
+@enduml
