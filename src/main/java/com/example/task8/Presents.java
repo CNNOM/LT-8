@@ -17,7 +17,6 @@ public class Presents extends TreeDecorator {
     }
 
     private void drawPresents(Pane pane) {
-        // Рисуем подарки под ёлкой
         Rectangle present1 = new Rectangle(100, 460, 50, 50);
         present1.setFill(Color.RED);
         present1.setStroke(Color.BLACK);
@@ -33,7 +32,6 @@ public class Presents extends TreeDecorator {
         present3.setStroke(Color.BLACK);
         present3.setStrokeWidth(2);
 
-        // Рисуем ленточки на подарках
         Rectangle ribbon1 = new Rectangle(120, 460, 10, 49);
         ribbon1.setFill(Color.YELLOW);
 
@@ -67,7 +65,6 @@ public class Presents extends TreeDecorator {
         );
         bow3.setFill(Color.ORANGE);
 
-        // Добавляем подарки, ленточки и бантики на панель
         pane.getChildren().addAll(present1, present2, present3, ribbon1, ribbon2, ribbon3, bow1, bow2, bow3);
     }
 }
